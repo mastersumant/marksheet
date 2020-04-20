@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+
+}
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../ece01.jpg);
+	height: 100vh;
+	background-size:cover;
+	background-position: center;
+}
+ul{
+	float:right;
+	list-style-type: none;
+	margin-top: 25px;
+
+ }
+ ul li{
+ 	display: inline-block;
+ }
+ ul li a{
+ 	text-decoration: none;
+ 	color:#fff;
+ 	padding: 5px 20px;
+ 	border: 1px solid transparent;
+ 	transition: 0.6s;
+
+
+}
+ 
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+	
+}
+
+.main{
+	max-width: 1200px;
+	margin:auto;
+}
+.title{
+	position: absolute;
+	top:47%;
+	left:25%;
+	transition: translate(-50%,-50%);
+}
+.title h1{
+	color:#D3D3D3;
+    font-size:60px;
+} 
+.button{
+	position: absolute;
+	top:60%;
+	left:40%;
+	transition: translate(-50%,-50%);
+
+
+}

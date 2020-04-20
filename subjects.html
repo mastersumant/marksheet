@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+      background-color: aliceblue;
+			/* background-image: url("ece01.jpg"); */
+			background-repeat: no-repeat;
+			background-size: cover
+		}
+		option {
+  margin: 0.5em;
+}
+	</style>
+	<title>subjects</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body bgcolor="#abcdef">
+	<br><br>
+	<center>
+	<form method="post" action="connect.php">
+    <div class="col-xs-4">
+      name :     <input type="text" name="name"><br><br>
+    </div>
+    <div class="col-xs-4">
+      usn :       <input  type="text" name="usn"><br><br>
+    </div>
+		<div class="col-xs-12">
+     SEM: <select class="form-control" type="text"  name="sem" id="select1">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+</select>
+</div>
+<div class="col-xs-12">
+  Subject: <select class="form-control" type="text" name="subject" id="select2">
+    <option value="3" >3RMAT3A-ENGG.MATHEMATICS-III</option>
+    <option value="3" id="3RTE01">3RTE01-ELECTRONICS MEASUREMENTS & INSTRUMENTATION</option>
+    <option value="3" id="3RTE02">3RTE02-NETWORK ANALYSIS</option>
+    <option value="3" id="3RTE03">3RTE03-SIGNALS AND SYSTEMS</option>
+    <option value="3" id="3RTE04">3RTE04-DIGITAL ELECTRONICS CIRCUITS DESIGN AND VERILOG</option>
+    <option value="3" id="3RTE05">3RTE05-ANALOG MOS CIRCUITS DESIGN</option>
+    <option value="3" id="3RTEL1">3RTEL1-ANALOG ELECRONICS CIRCUITS LAB</option>
+    <option value="3" id="3RTEL2">3RTEL2-DIGITAL ELECTRONICS CIRCUITS DESIGN AND VERILOG LAB</option>
+    <option value="3" id="HSS-CIPE">HSS-CIPE</option>
+    <option value="4" id="4RMAT3">4RMAT3-STATISTICS AND PROBABLITY FOR ENGINEERING</option>
+    <option value="4" id="4RTE03">4RTE03-LINEAR,MIXED SIGNALS AND RF IC'S</option>
+    <option value="4" id="4RTE04">4RTE04-CONTROL SYSTEMS IN ELECTRONICS CIRCUITS</option>
+    <option value="4" id="4RTE07">4RTE07-PROCESSOR AND CONTROLLER ARCHITECTURE</option>
+    <option value="4" id="4RTE06">4RTE06-ANALOG AND  DIGITAL COMMUNICATION<option>
+    <option value="4" id="4RTE01">4RTE01-ENGG. ELECTROMAGNETIC AND FIELD THEORY</option>
+    <option value="4" id="4RTEL1">4RTEL1-LINEAR IC'S AND ANALOG COMMUNICATION LAB</option>
+    <option value="4" id="4RTEL2">4RTEL2-MICROCONTROLLER LAB</option>
+    <option value="4" id="HSS">HSS-ENVIRONMENTAL SCIENCE</option>
+</select>
+</div>
+<div class="col-xs-6">
+ Marks obtained: <input list="marks" type="text" name="marks">
+<datalist id="marks">
+  <option value="4.5">
+  <option value="4.0">
+  <option value="3.5">
+  <option value="3.0">
+  <option value="2.5">
+  <option value="2.0">
+  <option value="X">  
+  </datalist>
+</div>
+<div class="col-xs-6">
+Grade obtained: <input list="grade" type="text" name="grade">
+<datalist id="grade">
+  <option value="S+">
+  <option value="S">
+  <option value="A">
+  <option value="B">
+  <option value="D">
+  <option value="F">
+  <option value="X">  
+  </datalist>
+</div>
+
+<button  type="submit" value="Submit" onclick="myFunction()">Submit</button>
+	</form>
+</center>
+	<script>
+		//Reference: https://jsfiddle.net/fwv18zo1/
+var $select1 = $( '#select1' ),
+		$select2 = $( '#select2' ),
+    $options = $select2.find( 'option' );
+    
+$select1.on( 'change', function() {
+	$select2.html( $options.filter( '[value="' + this.value + '"]' ) );
+} ).trigger( 'change' );
+  </script>
+  <script>
+      function myFunction() {
+      document.getElementById("3RMAT3A").value = "3RMAT3A";}
+    </script>
+</body>
+</html>
